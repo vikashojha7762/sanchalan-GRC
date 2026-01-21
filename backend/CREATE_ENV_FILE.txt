@@ -1,0 +1,35 @@
+INSTRUCTIONS TO CREATE .env FILE:
+==================================
+
+1. In your editor (VS Code/Cursor), navigate to the backend folder
+2. Create a NEW FILE named exactly: .env
+3. Copy and paste the content below into that file
+4. Save the file
+
+==================================
+COPY THIS CONTENT BELOW:
+==================================
+
+DATABASE_URL=postgresql+psycopg2://postgres:YOUR_PASSWORD@localhost:5433/GRC_Database
+OPENAI_API_KEY=your_openai_api_key_here
+PINECONE_API_KEY=your_pinecone_api_key_here
+PINECONE_ENVIRONMENT=us-east-1
+PINECONE_INDEX_NAME=sanchalan-index
+JWT_SECRET=change_this_secret
+JWT_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+BACKEND_CORS_ORIGINS=http://localhost:5173
+
+==================================
+FILE LOCATION:
+==================================
+backend/.env
+
+==================================
+VERIFICATION:
+==================================
+After creating the file, test with:
+cd backend
+python -c "from app.db import DATABASE_URL; print('✅ DATABASE_URL loaded')"
+python -c "from app.core.config import settings; print('✅ OPENAI_API_KEY:', settings.OPENAI_API_KEY[:20] + '...')"
+python -c "from app.core.config import settings; print('✅ PINECONE_API_KEY:', settings.PINECONE_API_KEY[:20] + '...')"

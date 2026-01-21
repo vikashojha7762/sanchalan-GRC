@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-dotenv
+SQLAlchemy
+psycopg2-binary
+alembic
+pydantic
+passlib[bcrypt]
+python-jose[cryptography]
+requests
+openai
+pinecone
+python-multipart
+PyPDF2
+pycryptodome
+pdfplumber
+python-docx

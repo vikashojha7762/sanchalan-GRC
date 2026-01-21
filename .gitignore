@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment variables - NEVER COMMIT THESE
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+# Allow .env.example files (templates are safe to commit)
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Sensitive files (be careful with these patterns)
+# Note: CREATE_ENV_FILE.txt is now sanitized and safe to commit
+*_secret*
+*_key*
+*_password*
+*_credential*
+
+# Uploads and storage (may contain sensitive data)
+backend/uploads/
+backend/storage/
+frontend/public/uploads/
+
